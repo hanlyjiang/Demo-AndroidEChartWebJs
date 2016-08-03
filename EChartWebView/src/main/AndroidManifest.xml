@@ -23,12 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".EchartActivity">
+        <activity android:name=".Activity1">
         </activity>
-        <activity android:name=".EChartSDActivity">
+        <activity android:name=".WebViewTestActivity">
 
-        </activity>
-        <activity android:name=".LocalChartSDActivity">
         </activity>
     </application>
 

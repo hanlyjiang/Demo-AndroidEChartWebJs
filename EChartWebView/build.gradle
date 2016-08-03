@@ -10,17 +10,94 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
+        // 如果需要开启MultiDexSupport 应对 64K方法数限制，取消下面一行的注释
+        // multiDexEnabled true
+
+        /*  单元测试支持，指定单元测试runner-AndroidJUnitRunner
+            指定junit4 testRunner 为默认的
+            https://developer.android.com/training/testing/unit-testing/instrumented-unit-tests.html#build
+         */
+         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
+
+    // 签名信息配置
+    signingConfigs {
+        defaultSign {
+            storeFile file('填写签名文件路径')
+            storePassword '签名文件密码'
+            keyAlias 'key'
+            keyPassword 'keyPasswrod'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            // 代码对齐优化
+            // zipAlignEnabled true
+
+            //指定签名
+            //signingConfig signingConfigs.signConf
+        }
+
+        debug {
+            // 设置debug版本的包名
+            applicationIdSuffix ".debug"
+            // 在debug版本中加入签名信息
+
         }
     }
+
+    // Flavors 配置示例
+    productFlavors {
+//        product {
+//            versionName "1.0_Alpha"
+//            signingConfig signingConfigs.defaultSign
+//        }
+    }
+
+    // jni 目录 设置
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    // 对于需要指定Java 版本的
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_7
+//        targetCompatibility JavaVersion.VERSION_1_7
+//    }
+
+    // dexInProcess 开启与关闭
+//    dexOptions {
+//        dexInProcess = false
+//    }
+
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
+
+    // 添加other_libs 目录下的jar
+    //compile fileTree(dir: 'other_libs', include: ['*.jar'])
+
+    // 加入本工程模块
+    //compile project(':extraMoudle1')
+    // 加入其他工程模块，需要在Project基本的settings.gradle 中配置模块路径，具体可以查看settings.gradle
+    //compile project(path: ':extraMoudle1')
+
+
+    // 单元测试依赖库
+    androidTestCompile 'com.android.support:support-annotations:23.4.0'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support.test:rules:0.5'
+    androidTestCompile 'junit:junit:4.12'
+
 }

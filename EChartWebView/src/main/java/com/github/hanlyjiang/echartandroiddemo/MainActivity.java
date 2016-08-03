@@ -40,10 +40,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private void setStartItems() {
         mActivities = new ArrayList<>();
 
-        mActivities.add(makeActItem(EchartActivity.class,"EChart 测试","WebView展示assert文件夹中 echart"));
+        mActivities.add(makeActItem(Activity1.class,"测试Activitiy1","打开google"));
 
-        mActivities.add(makeActItem(EChartSDActivity.class,"EChart 测试","WebView展示内部存储中 echart"));
-        mActivities.add(makeActItem(LocalChartSDActivity.class, "国情WebView测试", "WebView展示内部存储中 echart"));
+        mActivities.add(makeActItem(WebViewTestActivity.class,"测试Activitiy2","打开百度"));
 
     }
 

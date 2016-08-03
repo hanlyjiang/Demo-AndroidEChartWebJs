@@ -1,1 +1,5 @@
 include ':EChartWebView'
+
+// 引入外部文件夹作为 moudle
+//project(':extraMoudle1).projectDir = new File('../OtherApp/moudle1')
+//project(':extraMoudle2').projectDir = new File('../OtherApp/moudle2')
