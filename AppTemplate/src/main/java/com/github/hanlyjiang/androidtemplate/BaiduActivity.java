@@ -1,19 +1,15 @@
-package com.github.hanlyjiang.echartandroiddemo;
+package com.github.hanlyjiang.androidtemplate;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.support.v4.os.EnvironmentCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import java.io.File;
-
 /**
  *
  */
-public class WebViewTestActivity extends AppCompatActivity {
+public class BaiduActivity extends AppCompatActivity {
 
     private WebView mWebView;
 

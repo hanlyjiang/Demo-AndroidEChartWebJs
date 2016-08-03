@@ -1,4 +1,4 @@
-package com.github.hanlyjiang.echartandroiddemo;
+package com.github.hanlyjiang.androidtemplate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,10 +15,8 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    private ListView mItemList;
 
     private List<Map<String, Object>> mActivities;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         SimpleAdapter adapter = new SimpleAdapter(this, mActivities, android.R.layout.simple_list_item_2,
                 new String[]{ "title", "desc"},
                 new int[]{android.R.id.text1, android.R.id.text2,});
-        mItemList = (ListView) findViewById(R.id.listView);
+        ListView mItemList = (ListView) findViewById(R.id.listView);
         mItemList.setAdapter(adapter);
         mItemList.setOnItemClickListener(this);
 
@@ -40,9 +38,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private void setStartItems() {
         mActivities = new ArrayList<>();
 
-        mActivities.add(makeActItem(Activity1.class,"测试Activitiy1","打开google"));
+        mActivities.add(makeActItem(GoogleActivity.class,"测试Activitiy1","打开google"));
 
-        mActivities.add(makeActItem(WebViewTestActivity.class,"测试Activitiy2","打开百度"));
+        mActivities.add(makeActItem(BaiduActivity.class,"测试Activitiy2","打开百度"));
 
     }
 

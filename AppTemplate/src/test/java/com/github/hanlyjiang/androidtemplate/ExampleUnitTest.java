@@ -1,4 +1,4 @@
-package com.github.hanlyjiang.echartandroiddemo;
+package com.github.hanlyjiang.androidtemplate;
 
 import org.junit.Test;
 
