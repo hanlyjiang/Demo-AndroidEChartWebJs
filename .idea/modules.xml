@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EChartWebView/AndroidDemosCollect.iml" filepath="$PROJECT_DIR$/EChartWebView/AndroidDemosCollect.iml" />
-      <module fileurl="file://$PROJECT_DIR$/AppTemplate/AppTemplate.iml" filepath="$PROJECT_DIR$/AppTemplate/AppTemplate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AppTemplate.iml" filepath="$PROJECT_DIR$/AppTemplate.iml" />
       <module fileurl="file://$PROJECT_DIR$/EChartAndroidDemo.iml" filepath="$PROJECT_DIR$/EChartAndroidDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/EChartAndroidDemo.iml" filepath="$PROJECT_DIR$/EChartAndroidDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/AppTemplate/EChartWebView.iml" filepath="$PROJECT_DIR$/AppTemplate/EChartWebView.iml" />
     </modules>
   </component>
 </project>
