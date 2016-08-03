@@ -26,6 +26,9 @@
         <activity android:name=".EchartActivity">
         </activity>
         <activity android:name=".EChartSDActivity">
+
+        </activity>
+        <activity android:name=".LocalChartSDActivity">
         </activity>
     </application>
 

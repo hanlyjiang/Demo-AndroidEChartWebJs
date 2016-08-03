@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mActivities.add(makeActItem(EchartActivity.class,"EChart 测试","WebView展示assert文件夹中 echart"));
 
         mActivities.add(makeActItem(EChartSDActivity.class,"EChart 测试","WebView展示内部存储中 echart"));
+        mActivities.add(makeActItem(LocalChartSDActivity.class, "国情WebView测试", "WebView展示内部存储中 echart"));
 
     }
 
