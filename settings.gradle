@@ -1,4 +1,4 @@
-include ':EChartWebView'
+include ':AppTemplate'
 
 // 引入外部文件夹作为 moudle
 //project(':extraMoudle1).projectDir = new File('../OtherApp/moudle1')
