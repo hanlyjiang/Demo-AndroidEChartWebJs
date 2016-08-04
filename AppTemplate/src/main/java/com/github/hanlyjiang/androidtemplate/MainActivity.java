@@ -9,10 +9,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-import com.github.hanlyjiang.androidtemplate.EChartSDActivity;
-import com.github.hanlyjiang.androidtemplate.EchartActivity;
-import com.github.hanlyjiang.androidtemplate.LocalChartSDActivity;
-import com.github.hanlyjiang.androidtemplate.R;
+import com.github.hanlyjiang.androidtemplate.js.JSTestActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setStartItems();
 
         SimpleAdapter adapter = new SimpleAdapter(this, mActivities, android.R.layout.simple_list_item_2,
-                new String[]{ "title", "desc"},
+                new String[]{"title", "desc"},
                 new int[]{android.R.id.text1, android.R.id.text2,});
         mItemList = (ListView) findViewById(R.id.listView);
         mItemList.setAdapter(adapter);
@@ -43,14 +41,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private void setStartItems() {
         mActivities = new ArrayList<>();
 
-        mActivities.add(makeActItem(GoogleActivity.class,"测试Activitiy1","打开google"));
+        mActivities.add(makeActItem(GoogleActivity.class, "测试Activitiy1", "打开google"));
 
-        mActivities.add(makeActItem(BaiduActivity.class,"测试Activitiy2","打开百度"));
-		
-		mActivities.add(makeActItem(EchartActivity.class,"EChart 测试","WebView展示assert文件夹中 echart"));
+        mActivities.add(makeActItem(BaiduActivity.class, "测试Activitiy2", "打开百度"));
 
-        mActivities.add(makeActItem(EChartSDActivity.class,"EChart 测试","WebView展示内部存储中 echart"));
+        mActivities.add(makeActItem(EchartActivity.class, "EChart 测试", "WebView展示assert文件夹中 echart"));
+
+        mActivities.add(makeActItem(EChartSDActivity.class, "EChart 测试", "WebView展示内部存储中 echart"));
         mActivities.add(makeActItem(LocalChartSDActivity.class, "国情WebView测试", "WebView展示内部存储中 echart"));
+        mActivities.add(makeActItem(JSTestActivity.class, "JS交互测试", "Js 调用android 代码"));
 
     }
 

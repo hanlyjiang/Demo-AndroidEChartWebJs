@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Android 上JavaScript与本地Java代码交互测试</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- link rel="stylesheet" type="text/css" href="jsWeb.css" /-->
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body onload="onPageLoad()">
+
+<form action="form_action.asp" method="get">
+    First name: <input type="text" name="fname"/>
+    Last name: <input type="text" name="lname"/>
+    <input type="submit" value="Submit"/>
+</form>
+<button onClick="readFileContent()">点击读取文件</button>
+<button onClick="showToast('显示Toast')">显示Toast</button>
+
+<p id="commontext">html</p>
+</body>
+
+</html>
