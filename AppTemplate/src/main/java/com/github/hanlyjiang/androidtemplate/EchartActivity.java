@@ -15,7 +15,7 @@ public class EchartActivity extends AppCompatActivity {
 
         mWebView = (WebView) findViewById(R.id.webView);
 
-        mWebView.loadUrl("file:///android_asset/localhtml/doc/example/bar0.html");
+        mWebView.loadUrl("file:///android_asset/localhtml/doc/example/line5.html");
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
 

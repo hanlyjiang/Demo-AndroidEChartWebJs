@@ -50,6 +50,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mActivities.add(makeActItem(EChartSDActivity.class, "EChart 测试", "WebView展示内部存储中 echart"));
         mActivities.add(makeActItem(LocalChartSDActivity.class, "国情WebView测试", "WebView展示内部存储中 echart"));
         mActivities.add(makeActItem(JSTestActivity.class, "JS交互测试", "Js 调用android 代码"));
+        mActivities.add(makeActItem(EChartLocalActivity.class, "Echart 测试", "点击按钮后加载Echart 加载静态数据作为表格数据 "));
+        mActivities.add(makeActItem(EChartLocalInterfaceActivity.class, "EChart 测试",
+                "Js 调用Java 代码生成数据返回到JS作为表格数据"));
+
 
     }
 

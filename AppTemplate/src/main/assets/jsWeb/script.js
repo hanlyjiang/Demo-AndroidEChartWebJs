@@ -20,3 +20,7 @@ function showToast(toast) {
     Android.showToast(toast);
 //    alert(toast)
 }
+
+function makeOption(){
+    
+}

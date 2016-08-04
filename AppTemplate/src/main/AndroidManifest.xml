@@ -32,6 +32,8 @@
         <activity android:name=".LocalChartSDActivity"/>
 
         <activity android:name=".js.JSTestActivity"/>
+        <activity android:name=".EChartLocalInterfaceActivity"/>
+        <activity android:name=".EChartLocalActivity"/>
     </application>
 
 </manifest>
