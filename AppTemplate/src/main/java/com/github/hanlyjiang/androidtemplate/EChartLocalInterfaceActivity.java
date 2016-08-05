@@ -42,7 +42,6 @@ public class EChartLocalInterfaceActivity extends AppCompatActivity {
 
         mWebView = (WebView) findViewById(R.id.webView);
 
-//        dialog =  new AlertDialog.Builder(this).setMessage("正在查询...").create();
         dialog = new ProgressDialog(this);
         dialog.setMessage("正在查询...");
 
@@ -50,25 +49,20 @@ public class EChartLocalInterfaceActivity extends AppCompatActivity {
 
         webSettings.setJavaScriptEnabled(true);
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
-
         webSettings.setSupportZoom(true);
         webSettings.setDisplayZoomControls(true);
 
         mWebView.addJavascriptInterface(new WebAppInterface(this), "Android");
 
-
-        mWebView.loadUrl("file:///android_asset/localhtml/doc/example/line5_1.html");
+        mWebView.loadUrl("file:///android_asset/jsWeb/echart.html");
     }
 
 
     private void showDialog(){
-//        dialog.setProgress(50);
         dialog.show();
     }
 
     private void dismissDialog(){
-//        dialog.setProgress(100);
-
         dialog.dismiss();
     }
 

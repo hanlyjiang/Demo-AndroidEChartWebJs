@@ -23,17 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.github.hanlyjiang.androidtemplate.GoogleActivity"/>
         <activity android:name="com.github.hanlyjiang.androidtemplate.BaiduActivity"/>
-
-        <activity android:name=".EchartActivity"/>
-        <activity android:name=".EChartSDActivity"/>
-
-        <activity android:name=".LocalChartSDActivity"/>
 
         <activity android:name=".js.JSTestActivity"/>
         <activity android:name=".EChartLocalInterfaceActivity"/>
-        <activity android:name=".EChartLocalActivity"/>
     </application>
 
 </manifest>

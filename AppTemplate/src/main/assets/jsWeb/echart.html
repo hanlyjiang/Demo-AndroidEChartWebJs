@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ECharts">
+    <title>ECharts · Example</title>
+
+
+    <!-- 导入script -->
+    <!-- http://echarts.baidu.com/echarts2/doc/example/www/js/echarts.js -->
+    <!--<script src="./www/js/echarts.js"></script>-->
+    <script src="http://echarts.baidu.com/echarts2/doc/example/www/js/echarts.js"></script>
+    <script src="./android.js"></script>
+
+</head>
+
+<body onLoad="toast('页面加载中...')">
+<h1>显示Echart</h1>
+<div id="main" style="height:400px"></div>
+
+
+<script type="text/javascript">
+
+        // 路径配置
+        require.config({
+          paths: {
+            echarts: 'http://echarts.baidu.com/echarts2/doc/example/www/js'
+            //echarts: './www/js'
+          }
+        });
+
+
+        // 使用
+        require(
+          [
+            'echarts',
+            'echarts/chart/line', // 使用柱状图就加载line模块，按需加载
+            'echarts/chart/bar', // 使用柱状图就加载bar模块，按需加载
+            'echarts/chart/pie', // 使用柱状图就加载pie模块，按需加载
+          ],
+          function (ec) {
+            // 基于准备好的dom，初始化echarts图表
+            var myChart = ec.init(document.getElementById('main'));
+            //设置数据
+            var option = {
+            legend: {
+                data:['高度(km)与气温(°C)变化关系']
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : true,
+            tooltip : {
+                trigger: 'axis',
+                formatter: "Temperature : <br/>{b}km : {c}°C"
+            },
+            xAxis : [
+                {
+                    type : 'value',
+                    axisLabel : {
+                        formatter: '{value} °C'
+                    }
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'category',
+                    axisLine : {onZero: false},
+                    axisLabel : {
+                        formatter: '{value} km'
+                    },
+                    boundaryGap : false,
+                    data : ['0', '10', '20', '30', '40', '50', '60', '70', '80']
+                }
+            ],
+            series : [
+                {
+                    name:'高度(km)与气温(°C)变化关系',
+                    type:'line',
+                    smooth:true,
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                shadowColor : 'rgba(0,0,0,0.4)'
+                            }
+                        }
+                    },
+                    data:[15, -50, -56.5, -46.5, -22.1, -2.5, -27.7, -55.7, -76.5]
+                }
+            ]
+        };
+
+
+            // 为echarts对象加载数据
+            myChart.setOption(option);
+          }
+
+        )
+
+
+
+</script>
+
+<hr/>
+<p>
+<b>从Android 代码中获取数据绘制图表</b><br/>
+<button onClick="loadALineChart()" style="height:40px">线状图</button>
+<button onClick="loadAChart(2)" style="height:40px">饼状图</button>
+<button onClick="loadAChart(1)" style="height:40px">柱状图</button>
+
+<p id="textcontent">没有内容</p>
+<div id="chart2" style="height:400px"/>
+</p>
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+</body>
+</html>
