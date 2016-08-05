@@ -6,28 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ECharts">
     <meta name="author" content="kener.linfeng@gmail.com">
-<title>ECharts · Example</title>
+    <title>ECharts · Example</title>
 
 
-<!-- 导入script -->
-<!-- http://echarts.baidu.com/echarts2/doc/example/www/js/echarts.js -->
-<!--<script src="./www/js/echarts.js"></script>-->
-<script src="http://echarts.baidu.com/echarts2/doc/example/www/js/echarts.js"></script>
-<script src="./line5.js"></script>
+    <!-- 导入script -->
+    <script src="./www/js/echarts.js"></script>
+    <script src="./line5.js"></script>
+    <script type="text/javascript">
+
+
+
+    </script>
 
 </head>
 
 <body onLoad="toast('页面加载中...')">
-<h1>显示Echart</h1>
-<div id="main" style="height:400px"></div>
+    <h1 >显示Echart</h1>
+    <div id="main" style="height:400px"></div>
 
 
-<script type="text/javascript">
-        // 路径配置
+    <script type="text/javascript">
+        // 路径配置,指定echart js所在目录
         require.config({
           paths: {
-            echarts: 'http://echarts.baidu.com/echarts2/doc/example/www/js'
-            //echarts: './www/js'
+            echarts: './www/js'
           }
         });
 
@@ -36,9 +38,8 @@
         require(
           [
             'echarts',
-            'echarts/chart/line', // 使用柱状图就加载line模块，按需加载
+            'echarts/chart/line', // 使用柱状图就加载bar模块，按需加载
             'echarts/chart/bar', // 使用柱状图就加载bar模块，按需加载
-            'echarts/chart/pie', // 使用柱状图就加载pie模块，按需加载
           ],
           function (ec) {
             // 基于准备好的dom，初始化echarts图表
@@ -107,19 +108,17 @@
         )
 
 
+    </script>
 
-</script>
+    <button onClick="refreshChartUseStaticData()" >点击加载表格</button>
+    <p id="textcontent">没有内容</p>
+    <div id="chart2" style="height:400px"/>
+    <script type="text/javascript">
 
-<hr/>
-<p>
-<b>从Android 代码中获取数据绘制图表</b><br/>
-<button onClick="loadALineChart()" style="height:40px">线状图</button>
-<button onClick="loadAChart(2)" style="height:40px">饼状图</button>
-<button onClick="loadAChart(1)" style="height:40px">柱状图</button>
 
-<p id="textcontent">没有内容</p>
-<div id="chart2" style="height:400px"/>
-</p>
+    </script>
+
+
 
 
 <!-- Le javascript
