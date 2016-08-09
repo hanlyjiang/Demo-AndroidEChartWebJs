@@ -11,6 +11,8 @@ category:
 - Android
 ---
 
+[在我的博客中查看文章](http://hanlyjiang.site/2016/08/07/20160807-Android-%E4%B8%8A%E4%BD%BF%E7%94%A8Echart-js/)
+
 
 之前在项目中使用过MPAndroidChart 显示过数据图表，现在需要使用HTML + Echart 来显示，写了一个Demo,DEMO中实现了线图，饼图，还有柱状图。
     
