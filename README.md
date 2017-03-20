@@ -13,7 +13,7 @@ category:
 
 
 #Demo-AndroidEChartWebJs
-__Android 上 使用WebView + HTML + Echart 实现数据从Android 端取，展示使用HTML__。 [点击在我的博客中查看文章](http://hanlyjiang.site/2016/08/07/Android-%E4%B8%8A%E4%BD%BF%E7%94%A8Echart-js/)
+__Android 上 使用WebView + HTML + Echart 实现数据从Android 端取，展示使用HTML__。 [点击在我的简书中查看文章](http://www.jianshu.com/p/7b226e0e5f12)
 
 
 
