@@ -8,7 +8,7 @@ import java.io.File;
 /**
  * 通用的Android Log 工具接口
  * <br/> 目前使用 <a href="https://github.com/orhanobut/logger">Logger工具包</a>
- * <br/>Created by jianghanghang on 2016/7/22.
+ * <br/>Created by hanlyjiang on 2016/7/22.
  */
 public class LogUtils {
 
