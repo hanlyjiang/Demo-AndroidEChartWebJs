@@ -45,7 +45,7 @@ public class BaiduActivity extends AppCompatActivity {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 // 如果是百度页面，则在本页面打开，否则使用系统浏览器
-                if (Uri.parse(url).getHost().contains("baidu.com")) {
+                if (Uri.parse(url).getHost().endsWith(".baidu.com")) {
                     // This is my web site, so do not override; let my WebView load the page
                     Log.d("Host", "Host:" + Uri.parse(url).getHost());
                     return false;
